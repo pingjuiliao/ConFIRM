@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ -z $CC ]
+then
+  CC=gcc
+fi
+
+if [ -z $CXX ]
+then
+  CXX=g++
+fi
+
+sed -i "s/CC=clang/CC=${CC}/g" ./**/Makefile
+sed -i "s/CXX=clang++/CXX=${CXX}/g" ./**/Makefile
